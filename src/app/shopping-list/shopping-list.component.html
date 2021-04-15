@@ -1,3 +1,10 @@
 <div>
+  <app-shopping-edit></app-shopping-edit>
   <div>The list</div>
+  <ul>
+    <a href="#" *ngFor="let ingredient of ingredients">
+      {{ ingredient.name }}
+      {{ ingredient.amount }}
+    </a>
+  </ul>
 </div>

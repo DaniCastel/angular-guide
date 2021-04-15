@@ -13,6 +13,11 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Angular-material modules
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +29,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RecipeDetailComponent,
     RecipeListComponent,
     RecipeItemComponent,
+    ShoppingEditComponent,
   ],
-  imports: [BrowserModule, FormsModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
