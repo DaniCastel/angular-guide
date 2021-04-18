@@ -1,3 +1,33 @@
 h3 {
   color: blue;
 }
+
+.container {
+  display: grid;
+  grid-template-rows: min-content 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns:
+    [full-start] minmax(3rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end]
+    minmax(3rem, 1fr) [full-end];
+  & > * {
+    font-size: 1.5rem;
+  }
+}
+
+app-header {
+  display: grid;
+  grid-column: full-start / full-end;
+}
+
+.app-content {
+  display: grid;
+  grid-column: center-start / center-end;
+  grid-template-rows: 6rem auto;
+  grid-gap: 1rem;
+}
+
+.title {
+  display: grid;
+  grid-column: 1/-1;
+}

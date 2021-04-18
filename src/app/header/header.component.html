@@ -1,3 +1,12 @@
-<mat-toolbar>
-  <span>My Application</span>
-</mat-toolbar>
+<div class="header">
+  <mat-toolbar>
+    <span>My App</span>
+    <span class="spacer"></span>
+    <button mat-button color="primary" (click)="onSelect('recipe')">
+      Recipes
+    </button>
+    <button mat-button color="primary" (click)="onSelect('shopping')">
+      Shopping List
+    </button>
+  </mat-toolbar>
+</div>

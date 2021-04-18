@@ -1,23 +1,23 @@
-<div>
-  <button>New recipe</button>
-</div>
+<button mat-raised-button color="primary">New recipe</button>
 
-<hr />
-<div>
-  <a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipes">
-    <div class="pull-left">
-      <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-      <p class="list-group-item-text">{{ recipe.description }}</p>
-    </div>
-    <span class="pull-right">
+<div *ngFor="let recipe of recipes">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ recipe.name }}</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
       <img
         [src]="recipe.imagePath"
         alt="{{ recipe.name }}"
         class="img-responsive"
         style="max-height: 50px"
       />
-    </span>
-  </a>
-
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{ recipe.description }}
+      </p>
+    </mat-card-content>
+  </mat-card>
   <app-recipe-item></app-recipe-item>
 </div>

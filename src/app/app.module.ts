@@ -16,6 +16,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Angular-material modules
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 
 @NgModule({
@@ -36,6 +40,9 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

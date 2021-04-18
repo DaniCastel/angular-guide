@@ -1,13 +1,8 @@
 <div class="container">
-  <app-header></app-header>
-  <div class="row">
-    <div class="col">
-      <h3>app component</h3>
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
-      <hr />
-
-      <app-servers></app-servers>
-    </div>
+  <app-header (optionSelected)="onNavigate($event)"></app-header>
+  <div class="app-content">
+    <div class="title">Title</div>
+    <app-recipes *ngIf="loadedOption === 'recipe'"></app-recipes>
+    <app-shopping-list *ngIf="loadedOption !== 'recipe'"></app-shopping-list>
   </div>
 </div>
