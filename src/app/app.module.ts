@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Angular-material modules
+import { MaterialModule } from './material.module';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -40,9 +41,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
     FormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatButtonModule,
-    MatCardModule,
-    MatIconModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -3,14 +3,14 @@
   <form>
     <div class="form-group">
       <label for="">Name</label>
-      <input type="text" />
+      <input type="text" #nameInput />
     </div>
     <div>
       <label for="amount">Amount</label>
-      <input type="number" id="amount" />
+      <input type="number" id="amount" #amountInput />
     </div>
     <div>
-      <button type="submit">Add</button>
+      <button type="submit" (click)="onAddIngredient()">Add</button>
       <button type="button">Delete</button>
       <button type="button">Clear</button>
     </div>

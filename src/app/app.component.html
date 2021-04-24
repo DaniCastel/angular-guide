@@ -2,7 +2,10 @@
   <app-header (optionSelected)="onNavigate($event)"></app-header>
   <div class="app-content">
     <div class="title">Title</div>
-    <app-recipes *ngIf="loadedOption === 'recipe'"></app-recipes>
+    <app-recipes
+      class="app-recipes-content"
+      *ngIf="loadedOption === 'recipe'"
+    ></app-recipes>
     <app-shopping-list *ngIf="loadedOption !== 'recipe'"></app-shopping-list>
   </div>
 </div>

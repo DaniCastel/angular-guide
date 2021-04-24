@@ -27,6 +27,11 @@ app-header {
   grid-gap: 1rem;
 }
 
+.app-recipes-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
 .title {
   display: grid;
   grid-column: 1/-1;
