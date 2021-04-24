@@ -1,25 +1,13 @@
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav [mode]="over">
-    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-    <p>
-      <mat-radio-group class="example-radio-group" [formControl]="mode">
-        <label>Mode:</label>
-        <mat-radio-button value="over">Over</mat-radio-button>
-        <mat-radio-button value="side">Side</mat-radio-button>
-        <mat-radio-button value="push">Push</mat-radio-button>
-      </mat-radio-group>
-    </p>
-  </mat-sidenav>
+<div>
+  <app-recipe-list
+    (recipeWasSelected)="selectedRecipe = $event"
+  ></app-recipe-list>
 
-  <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-    <p>
-      <mat-radio-group class="example-radio-group" [formControl]="mode">
-        <label>Mode:</label>
-        <mat-radio-button value="over">Over</mat-radio-button>
-        <mat-radio-button value="side">Side</mat-radio-button>
-        <mat-radio-button value="push">Push</mat-radio-button>
-      </mat-radio-group>
-    </p>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  <app-recipe-detail
+    *ngIf="selectedRecipe; else infoText"
+    [recipe]="selectedRecipe"
+  ></app-recipe-detail>
+  <ng-template #infoText>
+    <p>Please select a Recipe!</p>
+  </ng-template>
+</div>
