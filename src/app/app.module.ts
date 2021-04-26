@@ -20,6 +20,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { ShoppingList } from './shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     MatToolbarModule,
     MaterialModule,
   ],
-  providers: [],
+  providers: [ShoppingList],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
